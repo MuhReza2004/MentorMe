@@ -582,3 +582,36 @@ img {
         transform: translateY(0);
     }
 }
+
+/* Animasi Scroll */
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease;
+}
+
+.hidden-bottom {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hidden-left,
+  .hidden-right,
+  .hidden-bottom {
+    transition: none;
+  }
+}
