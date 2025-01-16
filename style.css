@@ -205,6 +205,11 @@
 
 .marketplace {
   background-color: #B4D7D2;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 
 .fitur-content {
@@ -396,4 +401,179 @@
   .footer-content {
     grid-template-columns: 1fr;
   }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .benefits-grid,
+  .courses-grid,
+  .mentor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+
+  .fitur-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .konsultasi {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  .hero-section {
+    margin-top: 120px;
+    padding: 40px 0;
+  }
+
+  .carousel {
+    margin: 30px auto;
+  }
+
+  .benefits h4,
+  .courses h2 {
+    font-size: 1.2em;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-grid,
+  .courses-grid,
+  .mentor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card,
+  .course-card,
+  .mentor-card {
+    margin: 0 15px;
+  }
+
+  .fitur-image img {
+    max-width: 100%;
+  }
+
+  .footer-content {
+    padding: 0 15px;
+  }
+}
+
+/* Perbaikan untuk gambar responsif */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tambahkan hamburger button styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 5px;
+
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Animasi hamburger menjadi X */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        -webkit-transform: rotate(45deg) translate(5px, 5px);
+        -moz-transform: rotate(45deg) translate(5px, 5px);
+        -ms-transform: rotate(45deg) translate(5px, 5px);
+        -o-transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+        -o-transform: translateX(-20px);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+        -webkit-transform: rotate(-45deg) translate(7px, -6px);
+        -moz-transform: rotate(-45deg) translate(7px, -6px);
+        -ms-transform: rotate(-45deg) translate(7px, -6px);
+        -o-transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Animasi untuk link-link di dalam menu */
+    .nav-links a {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.2s;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
