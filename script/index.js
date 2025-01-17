@@ -15,13 +15,20 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 });
 
 // Animasi Scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
 
 // Animasi untuk benefit cards (dari kiri ke kanan)
 document.querySelectorAll(".benefit-card").forEach((card, index) => {

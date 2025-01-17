@@ -607,8 +607,7 @@ img {
 
 .show {
   opacity: 1;
-  transform: translateX(0);
-  transform: translateY(0);
+  transform: translate(0, 0) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
