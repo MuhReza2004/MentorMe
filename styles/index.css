@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -76,9 +77,10 @@
 }
 
 .hero-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .carousel {
@@ -197,9 +199,10 @@
 }
 
 .fitur-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -261,6 +264,7 @@
 
 /* Mentor Section */
 .mentor-section {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 0;
@@ -323,9 +327,10 @@
 }
 
 .footer-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .footer-content {
@@ -418,6 +423,8 @@
   .mentor-grid {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .fitur-container {
