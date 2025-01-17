@@ -98,7 +98,10 @@
 .carousel-item {
   min-width: 100%;
   transition: transform 0.5s ease-in-out;
-
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item img {
@@ -106,12 +109,12 @@
   display: block;
 }
 
-/* @keyframes slide {
+@keyframes slide {
   0% { transform: translateX(0); }
   33% { transform: translateX(-100%); }
   66% { transform: translateX(-200%); }
   100% { transform: translateX(0); }
-} */
+}
 .text-highlighth1{
     color: #00A67C;
     font-size: 2.5em;
